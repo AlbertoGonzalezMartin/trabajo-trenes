@@ -7,6 +7,7 @@ let segundos = 0;
 let minutos = 0;
 let horas = 0;
 let intervalIdsegundos
+let tiempotardado
 
 function segundosincrement() {
     milisegundos += 1
@@ -38,10 +39,10 @@ document.getElementById("f_segundos").addEventListener("click", function(event) 
     } else {
         clearInterval(intervalIdsegundos);
         intervalIdsegundos = null;
-
+        tiempotardado = "has tardado en corregir=" + horas + ":" + minutos + ":" + segundos + ":" + milisegundos
+        console.log(tiempotardado)
     }
 });
-
 
 
 let countEl = document.getElementById("count-el")

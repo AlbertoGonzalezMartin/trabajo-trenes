@@ -45,8 +45,7 @@ button:focus {
     transition: background-color 0.3s;
 }
 
-#decrement-btn
-{
+#decrement-btn {
     background: rgb(16, 0, 161);
     border: none;
     padding: 10px 20px;
@@ -59,7 +58,7 @@ button:focus {
 }
 
 #save-btn {
-    background: darkgreen;    
+    background: darkgreen;
     border: none;
     padding: 10px 20px;
     color: white;
@@ -70,7 +69,7 @@ button:focus {
     transition: background-color 0.3s;
 }
 
-#increment-btn:hover, #decrement-btn:hover, #save-btn:hover {
+#increment-btn:hover,#decrement-btn:hover,#save-btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -92,11 +91,16 @@ button:focus {
     border-color: orange;
 }
 
-#save-el, #total {
+#save-el,#total {
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 20px;
     border-radius: 5px;
     border: 2px solid white;
     margin-bottom: 10px;
+}
+
+
+#audioControl {
+    display: none;
 }

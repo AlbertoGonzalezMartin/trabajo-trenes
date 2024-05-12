@@ -1,25 +1,32 @@
+<html>
+
 <head>
     <link rel="stylesheet" href="index.css">
+    <audio id="trenaudio" src="train.mp3"></audio>
+
 </head>
 
 <body>
-<!-- Haz click en este boton (arriba a la izquierda) nada mas empezar a corregir 
+    <!-- Haz click en este boton (arriba a la izquierda) nada mas empezar a corregir 
     por si te da curiosidad saber cuanto tardas en corregir ;) -->
     <button id="f_segundos" onclick="segundosincrement()">
         <a id="horas-el">00</a>:<a id="minutos-el">00</a>:<a id="segundos-el">00</a>:
         <a id="milisegundos-el">00</a>
-    </button>
-    
-<!-- para pararlo vuelve a hacer click -->
-<h1>Gente que entró:</h1>
+    </button> <!-- para pararlo vuelve a hacer click -->
+
+    <h1>Gente que esta entrando:</h1>
     <h2 id="count-el">0</h2>
+
     <!-- si mantienes el click aumenta o disminuye solo rapido-->
     <button id="increment-btn" onclick="increment()">INCREMENTAR</button>
     <button id="decrement-btn" onclick="decrement()">DISMINUIR</button>
+    
     <button id="save-btn" onclick="save()">GUARDAR</button>
     <p id="save-el">Entradas diarias: </p>
 
     <!-- sale el total de todos las personas que han entrado en la estacion-->
-    <p id="total">Entradas totales: <a id="sume-el"></a> </p>
+    <p id="total">Entradas totales: <a id="sume-el"></a> </p> 
     <script src="index.js"></script>
 </body>
+
+</html>

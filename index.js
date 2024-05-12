@@ -109,3 +109,12 @@ function save() {
     countEl.textContent = 0
     count = 0
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        var audio = document.getElementById("trenaudio");
+        audio.play();
+    }, 5000);
+});

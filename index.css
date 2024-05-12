@@ -92,10 +92,11 @@ button:focus {
     border-color: orange;
 }
 
-#save-el {
+#save-el, #total {
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px 20px;
     border-radius: 5px;
     border: 2px solid white;
+    margin-bottom: 10px;
 }

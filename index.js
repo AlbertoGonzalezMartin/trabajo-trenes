@@ -65,7 +65,6 @@ function decrement() {
 let intervalId;
 let delayTimer;
 
-
 document.getElementById("increment-btn").addEventListener("mousedown", function (event) {
     let delayFunction = function () {
         increment();

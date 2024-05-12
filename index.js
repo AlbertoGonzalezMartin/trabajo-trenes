@@ -1,3 +1,4 @@
+//contador de tiempo boton de arriba a la izquierda 
 let milisegundosEl = document.getElementById("milisegundos-el")
 let segundosEl = document.getElementById("segundos-el")
 let minutosEl = document.getElementById("minutos-el")
@@ -20,7 +21,6 @@ function segundosincrement() {
         segundos = 0
         minutos += 1
     }
-
     if (minutos === 60) {
         minutos = 0
         horas += 1
@@ -30,8 +30,6 @@ function segundosincrement() {
     minutosEl.textContent = minutos
     horasEl.textContent = horas
 }
-
-
 document.getElementById("f_segundos").addEventListener("click", function (event) {
     if (!intervalIdsegundos) {
         intervalIdsegundos = setInterval(segundosincrement, 10)
@@ -42,14 +40,16 @@ document.getElementById("f_segundos").addEventListener("click", function (event)
         tiempotardado = "has tardado en corregir=" + horas + ":" + minutos + ":" + segundos + ":" + milisegundos
         console.log(tiempotardado)
     }
-});
+})
+
 
 
 let countEl = document.getElementById("count-el")
 let count = 0
 let saveEl = document.getElementById("save-el")
 console.log(saveEl)
-
+let intervalId
+let delayTimer
 
 function increment() {
     count += 1
@@ -63,9 +63,7 @@ function decrement() {
     }
 }
 
-let intervalId;
-let delayTimer;
-
+//evento en el boton de incremento para que al mantener el click en el boton se haga la funcion increment cada 100 milisegundos 
 document.getElementById("increment-btn").addEventListener("mousedown", function (event) {
     let delayFunction = function () {
         increment();
@@ -74,11 +72,13 @@ document.getElementById("increment-btn").addEventListener("mousedown", function 
     delayTimer = setTimeout(delayFunction, 1000)
 });
 
+//al soltar el click en el boton deja de repetirse la funcion increment
 document.getElementById("increment-btn").addEventListener("mouseup", function (event) {
     clearTimeout(delayTimer)
     clearInterval(intervalId)
 });
 
+//evento en el boton de disminuir para que al mantener el click en el boton se haga la funcion decrement cada 100 milisegundos 
 document.getElementById("decrement-btn").addEventListener("mousedown", function (event) {
     let delayFunction = function () {
         decrement()
@@ -87,10 +87,12 @@ document.getElementById("decrement-btn").addEventListener("mousedown", function 
     delayTimer = setTimeout(delayFunction, 1000)
 });
 
+//al soltar el click en el boton deja de repetirse la funcion decrement
 document.getElementById("decrement-btn").addEventListener("mouseup", function (event) {
     clearTimeout(delayTimer)
     clearInterval(intervalId)
 });
+
 
 
 let sumEl = document.getElementById("sume-el")
@@ -98,7 +100,6 @@ console.log(sumEl)
 let countsuma = 0
 
 function save() {
-
     countsuma = countsuma + count
     sumEl.textContent = countsuma
 
@@ -111,7 +112,7 @@ function save() {
 }
 
 
-
+//audio de un tren pasando por la estacion de tren  despues de 5 segundos del inicio de la pagina
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         var audio = document.getElementById("trenaudio");

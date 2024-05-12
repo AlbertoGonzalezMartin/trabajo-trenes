@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Botón Pulsado</title>
+</head>
+<body>
+
+<button id="miBoton">Presiona y mantén pulsado</button>
+
+<script>
+// Función que se ejecutará repetidamente mientras se mantenga pulsado el botón
+function ejecutarFuncion() {
+    console.log("Función ejecutada");
+    // Aquí puedes colocar el código que quieras ejecutar repetidamente
+}
+
+document.getElementById("miBoton").addEventListener("mousedown", function(event) {
+    ejecutarFuncion();
+    // Intervalo para repetir la función cada cierto tiempo
+    intervalId = setInterval(ejecutarFuncion, 100); 
+});
+
+// Manejador de evento cuando se libera el botón
+document.getElementById("miBoton").addEventListener("mouseup", function(event) {
+    // Limpiar el intervalo cuando se libera el botón
+    clearInterval(intervalId);
+});
+</script>
+
+</body>
+</html>

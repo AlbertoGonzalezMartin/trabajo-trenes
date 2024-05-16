@@ -120,3 +120,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
 });
 
+
+
+
+
+let precioel = document.getElementById("precio-el")
+let precio = 0
+
+function sumaentrada(){
+    precio = precio + 3
+    precioel.textContent = precio
+}
+
+function restaentrada(){
+    if (precio > 0) {
+    precio = precio - 3}
+    precioel.textContent = precio
+}
+
+
+
+let pagarel = document.getElementById("pagar-el")
+let dinero = 0
+
+function sumadinero(){
+    dinero += 1
+    pagarel.textContent = dinero + "€"
+}
+
+function restadinero(){
+    if (dinero > 0) {
+    dinero = dinero - 1}
+    pagarel.textContent =  dinero + "€"
+}
+
+
+
+let textopagarel = document.getElementById("textopagar-el")
+
+function pagado() {
+
+if (dinero < precio)
+    { 
+        textopagarel.textContent = "el saldo es insuficiente"
+    }
+
+
+if (dinero > precio){
+    let vuelta = dinero - precio
+    textopagarel.textContent = "la vuelta es:  " + vuelta + ",  el ticket ha sido comprado"
+}
+
+if (dinero == precio){
+    textopagarel.textContent = "el ticket ha sido comprado"
+}
+
+}

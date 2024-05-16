@@ -104,3 +104,18 @@ button:focus {
 #audioControl {
     display: none;
 }
+
+#divcompre{
+    
+        font-weight: bold;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    
+}
+
+#compre-el {
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

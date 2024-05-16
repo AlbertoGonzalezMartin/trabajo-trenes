@@ -26,6 +26,22 @@
 
     <!-- sale el total de todos las personas que han entrado en la estacion-->
     <p id="total">Entradas totales: <a id="sume-el"></a> </p> 
+    <div style="border: 1px solid black; "id=divcompre><p>el precio por entrada es: 3€</p>
+        <p>el precio es: <a id="precio-el">0</a>€
+        <button onclick="sumaentrada()">+1 entrada</button>
+        <button onclick="restaentrada()">-1 entrada</button></p>
+
+        <p>tu dinero: <a id="pagar-el">0</a>       
+        <button onclick="sumadinero()">+1€</button>
+        <button onclick="restadinero()">-1€</button></p>
+        <p> <a id="textopagar-el"></a>
+            <button onclick="pagado()">pagar</button> </p>
+
+
+
+    
+    </div>
+    
     <script src="index.js"></script>
 </body>
 
